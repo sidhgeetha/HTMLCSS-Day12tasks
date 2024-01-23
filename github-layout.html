@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style>
+
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    background-color: rgb(193, 250, 231);
+}
+
+.container{
+    display:grid;
+    height:100vh; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.5fr 1.3 0.8fr;
+    grid-template-areas: "navbar navbar navbar navbar"
+                          "sidebar main main main"
+                          "sidebar box1 box2 box3" 
+                          "sidebar footer footer footer"  ;
+                          grid-gap:2rem;
+                          text-align: center;
+                          font-size: 1.5rem;
+
+}
+@media only screen and (max-width:640px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 2fr 0.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: "navbar" "main" "sidebar" "box1" "box2" "box3" "footer";
+    }
+}
+
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <nav
+                style="background-color:rgb(93, 93, 93); grid-area: navbar;display: flex; align-items: center; padding: 0 15px; ">
+
+                <a class="navbar-brand" href="#">
+                    <img class="gitcat"
+                        src="./images/gitcat.png" width="40" height="40">
+                </a>
+            </nav>
+            <main
+                style="background-color:rgb(207, 207, 207);grid-area: main; ">
+                <div class="row"
+                    style="margin: 20;">
+                    <input style="height: 40px; font-size: 16px;" type="text"
+                        class="form-control"
+                        id="searchBar"
+                        placeholder="Search">
+                </div>
+
+            </main>
+            <div style="background-color:rgb(93, 93, 93);grid-area: sidebar; "
+                class="sidebar">sidebar</div>
+            <div style="background-color:rgb(180, 180, 180);grid-area:box1; "
+                class="box1">box1</div>
+            <div style="background-color:rgb(93, 93, 93);grid-area:box2; "
+                class="box1">box2</div>
+            <div style="background-color:rgb(183, 183, 183);grid-area:box3; "
+                class="box1">box3</div>
+            <div style="background-color:rgb(93, 93, 93);grid-area:footer;" c
+                lass="footer">footer</div>
+        </div>
+    </body>
+</html>

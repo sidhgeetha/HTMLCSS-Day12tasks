@@ -1,8 +1,8 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
-    <style>
+        <style>
     .gridContainer{
      
         display:grid;
@@ -35,13 +35,13 @@
     .body{
 
         background-color: rgb(255, 255, 255);
-        display: grid;
-         height:100vh;
-         width:100vw;
+        /* display: grid;
+         height:100vh; */
+         width:100vmin; 
         grid-template-rows: repeat(1, auto);
         grid-template-columns: repeat(2,auto);
     }
-.image{
+.col-image{
     grid-column-start:1;grid-column-end:2;background-color: rgb(216, 216, 216);
      display: flex;
       flex-direction: column;
@@ -81,27 +81,28 @@ input, select {
 
 
     </style>
+    </head>
 
     <body>
         <div class="gridContainer">
             <div class="header">
-             <div class="row1-heading"> Event1</div>
-             <div class="row2-sub-heading">No of seats available:23</div>
+                <div class="row1-heading"> Event1</div>
+                <div class="row2-sub-heading">No of seats available:23</div>
             </div>
-            
+
             <div class="body">
-                <div class="col image">
-                    <img style="height:30vh;width:10vw;"
+                <div class="col-md-4 col-12 col-image">
+                    <img style="height:50%;width:100%;border-radius: 50%;"
                         src="./images/Unknown.jpeg">
                 </div>
                 <div style=" grid-column:2/4;"
-                    class="col">
+                    class="col-md-8 col-1 col">
 
                     <form>
-                        <div class="form-element">
-                            <label for="name">Name:</label>
-                            <input type="text" name="name"
-                                placeholder="Enter your name">
+                        <div class="class-row">
+                            <div><label for="name">Name:</label></div>
+                            <div><input type="text" name="name"
+                                placeholder="Enter your name"></div>
                         </div>
 
                         <div class="form-element">
